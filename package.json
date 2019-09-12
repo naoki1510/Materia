@@ -1,0 +1,41 @@
+{
+    "name": "material",
+    "version": "1.0.0",
+    "description": "A skin based on Material Design",
+    "main": "javascript.js",
+    "scripts": {
+        "compile-sass": "node-sass --include-path scss,node_modules scss/style.scss ./style.css",
+        "build": "node-sass --include-path scss node_modules scss/style.scss ./style.css --output-style compressed",
+        "watch": "node-sass --include-path [node_modules,scss] scss/style.scss ./style.css -w",
+        "build_all": "webpack"
+    },
+    "repository": {
+        "type": "git",
+        "url": "git+https://github.com/naoki1510/Material.git"
+    },
+    "author": "naoki1510",
+    "license": "GPL-3.0-or-later",
+    "bugs": {
+        "url": "https://github.com/naoki1510/Material/issues"
+    },
+    "homepage": "https://github.com/naoki1510/Material#readme",
+    "dependencies": {
+        "@material/card": "^3.1.0",
+        "material-components-web": "^3.1.1"
+    },
+    "devDependencies": {
+        "@babel/core": "^7.6.0",
+        "@babel/preset-env": "^7.6.0",
+        "autoprefixer": "^9.6.1",
+        "babel-loader": "^8.0.6",
+        "css-loader": "^3.2.0",
+        "extract-loader": "^3.1.0",
+        "file-loader": "^4.2.0",
+        "node-sass": "^4.12.0",
+        "postcss-loader": "^3.0.0",
+        "sass-loader": "^8.0.0",
+        "webpack": "^4.39.3",
+        "webpack-cli": "^3.3.8",
+        "webpack-dev-server": "^3.8.0"
+    }
+}

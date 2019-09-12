@@ -1,0 +1,77 @@
+@import "@material/card/mdc-card";
+
+.list.ect-big-card {
+    .a-wrap {
+        position: relative;
+        background-color: $background-color;
+        padding: 0;
+        @include mdc-card-shape-radius(4px);
+
+        .entry-card-thumb{
+            margin: 0;
+            position: static;
+
+            img{
+                object-fit: cover;
+                min-height: 250px;
+                max-height: 350px;
+                height: 60%;
+                border-radius: 4px 4px 0 0;
+            }
+
+            @media (max-width:480px) {
+                overflow: hidden;
+
+                &::after {
+                    content: "";
+                    display: block;
+                    padding-top: 61.8%;
+                }
+            
+                img {
+                    object-fit: cover;
+                    position: absolute;
+                    top: 0;
+                    left: 0;
+                    width: 100%;
+                    height: 100%;
+                }
+            }
+            
+            .cat-label{
+                position: absolute;
+                top: unset;
+                bottom: 0;
+                background-color: transparent;
+                border: none;
+                color: mix($color, #888888, 30);
+                padding: 4px 18px 8px;
+
+                &::before{
+                    content: '\f07b';
+                    font-family: FontAwesome;
+                    padding-right: 6px;
+                }
+            }
+        }
+
+        .entry-card-content{
+            padding: 0 8px;
+
+            .entry-card-title{
+                padding: 10px;
+            }
+
+            .entry-card-snippet{
+                padding: 10px;
+                padding-bottom: 40px;
+                color: mix($color, #888888, 30);
+            }
+
+            .entry-card-meta{
+                padding: 4px 18px 8px;
+                color: mix($color, #888888, 30)
+            }
+        }
+    }
+}
