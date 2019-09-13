@@ -1,4 +1,5 @@
 @import "@material/card/mdc-card";
+@import "@material/elevation/mdc-elevation";
 
 .list.ect-big-card {
     .a-wrap {
@@ -6,6 +7,7 @@
         background-color: $background-color;
         padding: 0;
         @include mdc-card-shape-radius(4px);
+        @include mdc-elevation(1);
 
         .entry-card-thumb{
             margin: 0;
