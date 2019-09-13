@@ -4,9 +4,9 @@
     "description": "A skin based on Material Design",
     "main": "javascript.js",
     "scripts": {
-        "compile-sass": "node-sass --include-path scss,node_modules scss/style.scss ./style.css",
-        "build": "node-sass --include-path scss node_modules scss/style.scss ./style.css --output-style compressed",
-        "watch": "node-sass --include-path [node_modules,scss] scss/style.scss ./style.css -w",
+        "compile-sass": "node-sass --include-path node_modules scss/style.scss ./style.css",
+        "build": "webpack",
+        "watch": "webpack -w",
         "build_all": "webpack"
     },
     "repository": {

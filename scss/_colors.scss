@@ -1,2 +1,17 @@
-$color: black;
+/* Main */
+$text-color: black;
 $background-color: white;
+$primary-color: #0d47a1;
+$secondary-color: #82b1ff;
+
+/**
+ *
+ * 色参考サイト https://materializecss.com/color.html
+ *
+ **/
+
+/* Adjusted */
+$sub-text-color: mix($text-color, #888888, 30);
+$heading-text-color: $text-color;
+$header-text-color: $background-color;
+$header-background-color: $primary-color;

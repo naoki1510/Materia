@@ -1,24 +1,27 @@
-@import "@material/card/mdc-card";
+@import "@material/card/mdc-card/";
 @import "@material/elevation/mdc-elevation";
 
 .list.ect-big-card {
     .a-wrap {
         position: relative;
         background-color: $background-color;
-        padding: 0 0 15px;
+        padding: 0;
         @include mdc-card-shape-radius(4px);
         @include mdc-elevation(1);
 
+        &:hover {
+            @include mdc-elevation(8);
+        }
+
         .entry-card-thumb {
             margin: 0;
-            position: static;
 
             img {
                 object-fit: cover;
                 min-height: 250px;
                 max-height: 350px;
-                height: 60%;
                 border-radius: 4px 4px 0 0;
+                margin: 0;
             }
 
             @media (max-width:480px) {
@@ -29,39 +32,50 @@
             }
 
             .cat-label {
-                position: absolute;
-                top: unset;
-                bottom: -15px;
-                background-color: transparent;
-                border: none;
-                color: mix($color, #888888, 30);
-                padding: 4px 18px 8px;
-
-                &::before {
-                    content: '\f07b';
-                    font-family: FontAwesome;
-                    padding-right: 6px;
-                }
+                display: none;
             }
         }
 
         .entry-card-content {
-            padding: 0 8px;
+            padding: 0;
 
             .entry-card-title {
-                padding: 10px;
+                padding: 16px;
+                margin-bottom: 0;
             }
 
             .entry-card-snippet {
-                padding: 10px;
-                padding-bottom: 30px;
-                color: mix($color, #888888, 30);
+                padding: 0 16px 8px;
+                color: $sub-text-color;
             }
 
             .entry-card-meta {
-                bottom: -15px;
-                padding: 4px 18px 8px;
-                color: mix($color, #888888, 30)
+                position: static;
+                display: flex;
+                flex-direction: row;
+                align-items: center;
+                box-sizing: border-box;
+                min-height: 52px;
+                padding: 8px;
+                color: $sub-text-color;
+
+                .e-card-info {
+                    padding: 0 8px;
+                }
+
+                .entry-card-categorys {
+                    display: flex;
+                    flex-wrap: wrap;
+                    justify-content: flex-end;
+                    align-items: center;
+                    padding: 0 8px;
+                    margin-left: auto;
+
+                    span {
+                        padding: 2px;
+                        margin-right: 4px;
+                    }
+                }
             }
         }
     }
