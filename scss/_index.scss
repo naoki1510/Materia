@@ -1,10 +1,9 @@
-@import "@material/card/mdc-card/";
-@import "@material/elevation/mdc-elevation";
-
-.list.ect-big-card {
+/* 共通 */
+.list {
     .a-wrap {
         position: relative;
-        background-color: $background-color;
+        background-color: $surface;
+        color: $on-surface;
         padding: 0;
         @include mdc-card-shape-radius(4px);
         @include mdc-elevation(1);
@@ -13,68 +12,100 @@
             @include mdc-elevation(8);
         }
 
-        .entry-card-thumb {
-            margin: 0;
+        .entry-card {
+            display: flex;
+            flex-direction: row;
+            box-sizing: border-box;
+            font-size: 1rem;
 
-            img {
-                object-fit: cover;
-                min-height: 250px;
-                max-height: 350px;
-                border-radius: 4px 4px 0 0;
+            .card-thumb {
+                width: 220px;
+                height: 220px;
                 margin: 0;
-            }
+                background-color: gray;
+                align-self: stretch;
 
-            @media (max-width:480px) {
                 img {
-                    max-height: 250px;
-                    min-height: 200px;
+                    object-fit: cover;
+                    height: 100%;
+                    border-top-left-radius: 4px;
+                    border-bottom-left-radius: 4px;
+                }
+
+                .cat-label {
+                    display: none;
                 }
             }
 
-            .cat-label {
-                display: none;
+            .entry-card-content {
+                padding: 0;
+                margin: 0;
+                flex: 1;
+                display: flex;
+                flex-direction: column;
+
+                .entry-card-title {
+                    padding: 1rem;
+                    margin-bottom: 0;
+                }
+
+                .entry-card-snippet {
+                    padding: 0 1rem 0.5rem;
+                    opacity: 0.8;
+                }
+
+                .entry-card-meta {
+                    margin-top: auto;
+                    position: static;
+                    display: flex;
+                    flex-direction: row;
+                    align-items: center;
+                    box-sizing: border-box;
+                    min-height: 52px;
+                    padding: 0.5rem;
+                    opacity: 0.8;
+
+                    .e-card-info {
+                        padding: 0 0.5rem;
+                    }
+
+                    .entry-card-categorys {
+                        display: flex;
+                        flex-wrap: wrap;
+                        justify-content: flex-end;
+                        align-items: center;
+                        padding: 0 0.5rem;
+                        margin-left: auto;
+
+                        span {
+                            padding: 2px;
+                            margin-right: 4px;
+                        }
+                    }
+                }
             }
         }
 
-        .entry-card-content {
-            padding: 0;
+    }
 
-            .entry-card-title {
-                padding: 16px;
-                margin-bottom: 0;
-            }
+    /* 大きなカード */
+    &.ect-big-card .a-wrap,
+    &.ect-big-card-first .a-wrap:first-of-type {
+        .entry-card {
+            flex-direction: column;
 
-            .entry-card-snippet {
-                padding: 0 16px 8px;
-                color: $sub-text-color;
-            }
+            .card-thumb {
+                height: auto;
 
-            .entry-card-meta {
-                position: static;
-                display: flex;
-                flex-direction: row;
-                align-items: center;
-                box-sizing: border-box;
-                min-height: 52px;
-                padding: 8px;
-                color: $sub-text-color;
-
-                .e-card-info {
-                    padding: 0 8px;
+                img{
+                    display: block;
+                    min-height: 250px;
+                    max-height: 350px;
                 }
 
-                .entry-card-categorys {
-                    display: flex;
-                    flex-wrap: wrap;
-                    justify-content: flex-end;
-                    align-items: center;
-                    padding: 0 8px;
-                    margin-left: auto;
-
-                    span {
-                        padding: 2px;
-                        margin-right: 4px;
-                    }
+                @media (max-width:480px) {
+                    max-height: 250px;
+                    min-height: 200px;
                 }
             }
         }

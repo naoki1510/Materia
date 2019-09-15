@@ -10,22 +10,6 @@
   Priority: 9900000
 */
 /*以下にスタイルシートを記入してください*/
-/* Main */
-/**
- *
- * 色参考サイト https://materializecss.com/color.html
- *
- **/
-/* Adjusted */
-.main,
-.sidebar {
-  background-color: transparent;
-  padding: 0 2rem; }
-
-.ect-big-card-wrap .main {
-  max-width: 860px;
-  margin: auto; }
-
 .mdc-card {
   border-radius: 4px;
   background-color: #fff;
@@ -376,55 +360,155 @@
   transition: box-shadow 280ms cubic-bezier(0.4, 0, 0.2, 1);
   will-change: box-shadow; }
 
-.list.ect-big-card .a-wrap {
-  position: relative;
-  background-color: white;
-  padding: 0;
+/* Main */
+/**
+ *
+ * 色参考サイト 
+ * https://materializecss.com/color.html
+ * https://material.io/design/color/the-color-system.html#color-theme-creation
+ * https://material.io/resources/color/
+ *
+ **/
+.main,
+.sidebar {
+  background-color: whitesmoke;
+  padding: 1rem 0.5rem; }
+
+.ect-big-card-wrap .main {
+  max-width: 860px;
+  margin: auto; }
+
+/* 共通 */
+.list {
+  /* 大きなカード */ }
+  .list .a-wrap {
+    position: relative;
+    background-color: white;
+    color: black;
+    padding: 0;
+    border-radius: 4px;
+    box-shadow: 0px 2px 1px -1px rgba(0, 0, 0, 0.2), 0px 1px 1px 0px rgba(0, 0, 0, 0.14), 0px 1px 3px 0px rgba(0, 0, 0, 0.12); }
+    .list .a-wrap:hover {
+      box-shadow: 0px 5px 5px -3px rgba(0, 0, 0, 0.2), 0px 8px 10px 1px rgba(0, 0, 0, 0.14), 0px 3px 14px 2px rgba(0, 0, 0, 0.12); }
+    .list .a-wrap .entry-card {
+      display: flex;
+      flex-direction: row;
+      box-sizing: border-box;
+      font-size: 1rem; }
+      .list .a-wrap .entry-card .card-thumb {
+        width: 220px;
+        height: 220px;
+        margin: 0;
+        background-color: gray;
+        align-self: stretch; }
+        .list .a-wrap .entry-card .card-thumb img {
+          -o-object-fit: cover;
+             object-fit: cover;
+          height: 100%;
+          border-top-left-radius: 4px;
+          border-bottom-left-radius: 4px; }
+        .list .a-wrap .entry-card .card-thumb .cat-label {
+          display: none; }
+      .list .a-wrap .entry-card .entry-card-content {
+        padding: 0;
+        margin: 0;
+        flex: 1;
+        display: flex;
+        flex-direction: column; }
+        .list .a-wrap .entry-card .entry-card-content .entry-card-title {
+          padding: 1rem;
+          margin-bottom: 0; }
+        .list .a-wrap .entry-card .entry-card-content .entry-card-snippet {
+          padding: 0 1rem 0.5rem;
+          opacity: 0.8; }
+        .list .a-wrap .entry-card .entry-card-content .entry-card-meta {
+          margin-top: auto;
+          position: static;
+          display: flex;
+          flex-direction: row;
+          align-items: center;
+          box-sizing: border-box;
+          min-height: 52px;
+          padding: 0.5rem;
+          opacity: 0.8; }
+          .list .a-wrap .entry-card .entry-card-content .entry-card-meta .e-card-info {
+            padding: 0 0.5rem; }
+          .list .a-wrap .entry-card .entry-card-content .entry-card-meta .entry-card-categorys {
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: flex-end;
+            align-items: center;
+            padding: 0 0.5rem;
+            margin-left: auto; }
+            .list .a-wrap .entry-card .entry-card-content .entry-card-meta .entry-card-categorys span {
+              padding: 2px;
+              margin-right: 4px; }
+  .list.ect-big-card .a-wrap .entry-card,
+  .list.ect-big-card-first .a-wrap:first-of-type .entry-card {
+    flex-direction: column; }
+    .list.ect-big-card .a-wrap .entry-card .card-thumb,
+    .list.ect-big-card-first .a-wrap:first-of-type .entry-card .card-thumb {
+      height: auto; }
+      .list.ect-big-card .a-wrap .entry-card .card-thumb img,
+      .list.ect-big-card-first .a-wrap:first-of-type .entry-card .card-thumb img {
+        display: block;
+        min-height: 250px;
+        max-height: 350px; }
+      @media (max-width: 480px) {
+        .list.ect-big-card .a-wrap .entry-card .card-thumb,
+        .list.ect-big-card-first .a-wrap:first-of-type .entry-card .card-thumb {
+          max-height: 250px;
+          min-height: 200px; } }
+
+.sidebar h3 {
+  background-color: #0277bd;
+  color: white;
   border-radius: 4px;
+  margin: 0 0 1rem;
+  padding: 1rem;
   box-shadow: 0px 2px 1px -1px rgba(0, 0, 0, 0.2), 0px 1px 1px 0px rgba(0, 0, 0, 0.14), 0px 1px 3px 0px rgba(0, 0, 0, 0.12); }
-  .list.ect-big-card .a-wrap:hover {
-    box-shadow: 0px 5px 5px -3px rgba(0, 0, 0, 0.2), 0px 8px 10px 1px rgba(0, 0, 0, 0.14), 0px 3px 14px 2px rgba(0, 0, 0, 0.12); }
-  .list.ect-big-card .a-wrap .entry-card-thumb {
-    margin: 0; }
-    .list.ect-big-card .a-wrap .entry-card-thumb img {
-      -o-object-fit: cover;
-         object-fit: cover;
-      min-height: 250px;
-      max-height: 350px;
-      border-radius: 4px 4px 0 0;
-      margin: 0; }
-    @media (max-width: 480px) {
-      .list.ect-big-card .a-wrap .entry-card-thumb img {
-        max-height: 250px;
-        min-height: 200px; } }
-    .list.ect-big-card .a-wrap .entry-card-thumb .cat-label {
-      display: none; }
-  .list.ect-big-card .a-wrap .entry-card-content {
-    padding: 0; }
-    .list.ect-big-card .a-wrap .entry-card-content .entry-card-title {
-      padding: 16px;
-      margin-bottom: 0; }
-    .list.ect-big-card .a-wrap .entry-card-content .entry-card-snippet {
-      padding: 0 16px 8px;
-      color: #5f5f5f; }
-    .list.ect-big-card .a-wrap .entry-card-content .entry-card-meta {
-      position: static;
+
+.sidebar .widget-sidebar {
+  background-color: whitesmoke;
+  margin: 0 0 2rem; }
+  .sidebar .widget-sidebar .widget-entry-cards .a-wrap {
+    border-radius: 4px;
+    background-color: white;
+    padding: 0;
+    margin-bottom: 1rem;
+    box-shadow: 0px 2px 1px -1px rgba(0, 0, 0, 0.2), 0px 1px 1px 0px rgba(0, 0, 0, 0.14), 0px 1px 3px 0px rgba(0, 0, 0, 0.12); }
+    .sidebar .widget-sidebar .widget-entry-cards .a-wrap:hover {
+      box-shadow: 0px 5px 5px -3px rgba(0, 0, 0, 0.2), 0px 8px 10px 1px rgba(0, 0, 0, 0.14), 0px 3px 14px 2px rgba(0, 0, 0, 0.12); }
+    .sidebar .widget-sidebar .widget-entry-cards .a-wrap .widget-entry-card {
       display: flex;
       flex-direction: row;
       align-items: center;
       box-sizing: border-box;
-      min-height: 52px;
-      padding: 8px;
-      color: #5f5f5f; }
-      .list.ect-big-card .a-wrap .entry-card-content .entry-card-meta .e-card-info {
-        padding: 0 8px; }
-      .list.ect-big-card .a-wrap .entry-card-content .entry-card-meta .entry-card-categorys {
-        display: flex;
-        flex-wrap: wrap;
-        justify-content: flex-end;
-        align-items: center;
-        padding: 0 8px;
-        margin-left: auto; }
-        .list.ect-big-card .a-wrap .entry-card-content .entry-card-meta .entry-card-categorys span {
-          padding: 2px;
-          margin-right: 4px; }
+      font-size: 1rem; }
+      .sidebar .widget-sidebar .widget-entry-cards .a-wrap .widget-entry-card .card-thumb {
+        width: 110px;
+        min-height: 110px;
+        margin: 0;
+        background-color: gray;
+        align-self: stretch; }
+        .sidebar .widget-sidebar .widget-entry-cards .a-wrap .widget-entry-card .card-thumb img {
+          -o-object-fit: cover;
+             object-fit: cover;
+          height: 100%;
+          border-top-left-radius: 4px;
+          border-bottom-left-radius: 4px; }
+      .sidebar .widget-sidebar .widget-entry-cards .a-wrap .widget-entry-card .card-content {
+        margin-left: 0;
+        flex: 1; }
+        .sidebar .widget-sidebar .widget-entry-cards .a-wrap .widget-entry-card .card-content .card-title {
+          font-weight: bold;
+          padding: 1rem; }
+  .sidebar .widget-sidebar .widget-entry-cards.card-large-image .a-wrap .widget-entry-card {
+    flex-direction: column;
+    font-size: 1rem; }
+    .sidebar .widget-sidebar .widget-entry-cards.card-large-image .a-wrap .widget-entry-card .card-thumb {
+      background-color: white;
+      width: 100%;
+      height: 200px; }
+    .sidebar .widget-sidebar .widget-entry-cards.card-large-image .a-wrap .widget-entry-card .card-content {
+      margin: 0; }

@@ -93,7 +93,7 @@
 /*! no static exports found */
 /***/ (function(module, exports) {
 
-eval("//ここにスキンで利用するJavaScriptを記入する\n\n//# sourceURL=webpack:///./js/script.js?");
+eval("\n\n//# sourceURL=webpack:///./js/script.js?");
 
 /***/ }),
 

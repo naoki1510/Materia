@@ -1,17 +1,26 @@
 /* Main */
-$text-color: black;
-$background-color: white;
-$primary-color: #0d47a1;
-$secondary-color: #82b1ff;
+$background: whitesmoke;
+$on-background: black;
+
+$surface: white;
+$on-surface:black;
+
+$primary: #0277bd;
+$primary-variant: #3949ab;
+$on-primary: white;
+
+$secondary: $primary;
+$secondary-variant: $primary-variant;
+$on-secondary: $on-primary;
+
+$error: #c62828; // red darken-3
+$on-error: white;
 
 /**
  *
- * 色参考サイト https://materializecss.com/color.html
+ * 色参考サイト 
+ * https://materializecss.com/color.html
+ * https://material.io/design/color/the-color-system.html#color-theme-creation
+ * https://material.io/resources/color/
  *
  **/
-
-/* Adjusted */
-$sub-text-color: mix($text-color, #888888, 30);
-$heading-text-color: $text-color;
-$header-text-color: $background-color;
-$header-background-color: $primary-color;
