@@ -1,8 +1,8 @@
-# Material
+# Materia
 
 Cocoon用のマテリアルデザインベースのスキンです。
 
-作者ブログ [hobbby.net](https://www.hobbby.net)
+作者ブログ [hobbby.net](https://www.hobbby.net) いつか固定ページ作ります。
 
 ## ToDo
 
