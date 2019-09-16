@@ -378,6 +378,30 @@
   max-width: 860px;
   margin: auto; }
 
+/* アーカイブタイトル */
+.archive-title {
+  position: relative;
+  background-color: #0277bd;
+  color: white;
+  padding: 1rem;
+  border-radius: 4px;
+  box-shadow: 0px 2px 1px -1px rgba(0, 0, 0, 0.2), 0px 1px 1px 0px rgba(0, 0, 0, 0.14), 0px 1px 3px 0px rgba(0, 0, 0, 0.12);
+  margin-top: 0; }
+  .archive-title .fa {
+    display: inline-flex;
+    justify-content: center;
+    height: 1.75em;
+    width: 1.75em;
+    margin: -1rem 1rem -1rem -0.5rem;
+    background-color: white;
+    color: #0277bd;
+    text-align: center;
+    border-radius: 50%; }
+    .archive-title .fa::before {
+      display: inline-block;
+      flex: 0 1 auto;
+      margin: auto; }
+
 /* 共通 */
 .list {
   /* 大きなカード */
@@ -441,7 +465,7 @@
   .list .a-wrap {
     position: relative;
     background-color: white;
-    color: black;
+    color: #454545;
     padding: 0;
     transition: box-shadow 0.5s ease;
     border-radius: 4px;
@@ -603,10 +627,14 @@
 
 .sidebar .widget-sidebar {
   background-color: whitesmoke;
-  margin: 0 0 2rem; }
+  margin: 0 0 2rem;
+  /* 記事一覧 */
+  /* コメント */
+  /* 検索 */ }
   .sidebar .widget-sidebar .widget-entry-cards .a-wrap {
     border-radius: 4px;
     background-color: white;
+    color: #454545;
     padding: 0;
     margin-bottom: 1rem;
     box-shadow: 0px 2px 1px -1px rgba(0, 0, 0, 0.2), 0px 1px 1px 0px rgba(0, 0, 0, 0.14), 0px 1px 3px 0px rgba(0, 0, 0, 0.12); }
@@ -679,7 +707,7 @@
         content: '';
         display: block;
         height: 1px;
-        background-color: black;
+        background-color: #454545;
         margin: 0 0.5rem;
         opacity: 0.1; }
   .sidebar .widget-sidebar .widget-entry-cards.border-square .a-wrap {
@@ -704,3 +732,45 @@
     border: none;
     margin-top: 0;
     transform: none; }
+  .sidebar .widget-sidebar .widget_search .search-box .search_edit {
+    border: none;
+    box-shadow: 0px 2px 1px -1px rgba(0, 0, 0, 0.2), 0px 1px 1px 0px rgba(0, 0, 0, 0.14), 0px 1px 3px 0px rgba(0, 0, 0, 0.12); }
+
+.pagination-next {
+  display: none; }
+
+.pagination {
+  border-radius: 4px;
+  overflow: hidden;
+  box-shadow: 0px 2px 1px -1px rgba(0, 0, 0, 0.2), 0px 1px 1px 0px rgba(0, 0, 0, 0.14), 0px 1px 3px 0px rgba(0, 0, 0, 0.12); }
+  .pagination .page-numbers {
+    background-color: white;
+    position: relative;
+    font-size: .875rem;
+    line-height: 48px;
+    height: 48px;
+    font-weight: 500;
+    padding: 0 24px;
+    margin: 0;
+    position: relative;
+    display: flex;
+    flex: 1 0 auto;
+    justify-content: center;
+    box-sizing: border-box;
+    border: none;
+    cursor: pointer;
+    border-radius: 0; }
+    .pagination .page-numbers.current {
+      color: #0277bd;
+      border-bottom: 2px solid #0277bd; }
+    .pagination .page-numbers:hover {
+      background-color: white; }
+      .pagination .page-numbers:hover::after {
+        content: '';
+        position: absolute;
+        top: 0;
+        bottom: 0;
+        left: 0;
+        right: 0;
+        background-color: #0277bd;
+        opacity: 0.04; }

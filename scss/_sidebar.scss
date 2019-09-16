@@ -12,10 +12,12 @@
         background-color: $background;
         margin: 0 0 2rem;
 
+        /* 記事一覧 */
         .widget-entry-cards {
             .a-wrap {
                 border-radius: 4px;
                 background-color: $surface;
+                color: $on-surface;
                 padding: 0;
                 margin-bottom: 1rem;
                 @include mdc-elevation(1);
@@ -91,8 +93,8 @@
                         opacity: 1;
                     }
 
-                    .widget-entry-card{
-                        .card-content{
+                    .widget-entry-card {
+                        .card-content {
                             position: absolute;
                             max-height: 100%;
                             padding: 0;
@@ -169,6 +171,19 @@
                     border: none;
                     margin-top: 0;
                     transform: none;
+                }
+            }
+        }
+
+        /* コメント */
+        .widget_recent_comments {}
+
+        /* 検索 */
+        .widget_search {
+            .search-box {
+                .search_edit {
+                    border: none;
+                    @include mdc-elevation(1);
                 }
             }
         }
