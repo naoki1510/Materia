@@ -32,7 +32,8 @@
 
                 @media (max-width:480px) {
                     width: 100%;
-                    height: 180px;
+                    max-height: 250px;
+                    min-height: 200px;
                 }
 
                 img {
@@ -175,6 +176,10 @@
 
     /* タイル */
     &.ect-vertical-card .a-wrap {
+        @media screen and (max-width: 768px){
+            display: block;
+            width: 100%;
+        }
         .entry-card {
             flex-direction: column;
         }
@@ -206,17 +211,6 @@
 
             .entry-card-meta {
                 margin-top: 0;
-
-                &::after {
-                    content: '';
-                    position: absolute;
-                    top: 0;
-                    bottom: 0;
-                    right: 0;
-                    width: 1rem;
-                    background: linear-gradient(to right, rgba(255, 255, 255, 0), rgba(255, 255, 255, 1) 80%);
-                    border-radius: 0 0 4px 0;
-                }
             }
         }
     }
