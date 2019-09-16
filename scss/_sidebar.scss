@@ -1,5 +1,5 @@
 .sidebar {
-    h3{
+    h3 {
         background-color: $primary;
         color: $on-primary;
         border-radius: 4px;
@@ -20,7 +20,7 @@
                 margin-bottom: 1rem;
                 @include mdc-elevation(1);
 
-                &:hover{
+                &:hover {
                     @include mdc-elevation(8);
                 }
 
@@ -32,11 +32,13 @@
                     font-size: 1rem;
 
                     .card-thumb {
-                        width: 110px;
-                        min-height: 110px;
+                        width: 25vw;
+                        max-width: 140px;
+                        min-height: 140px;
                         margin: 0;
                         background-color: gray;
                         align-self: stretch;
+
 
                         img {
                             object-fit: cover;
@@ -48,7 +50,12 @@
 
                     .card-content {
                         margin-left: 0;
+                        position: relative;
+                        width: 100%;
                         flex: 1;
+                        display: flex;
+                        align-self: stretch;
+                        flex-direction: column;
 
                         .card-title {
                             font-weight: bold;
@@ -58,26 +65,94 @@
                 }
             }
 
-            &.card-large-image{
-                .a-wrap{
-                    .widget-entry-card{
+            &.card-large-image {
+                .a-wrap {
+                    .widget-entry-card {
                         flex-direction: column;
                         font-size: 1rem;
 
-                        .card-thumb{
+                        .card-thumb {
                             background-color: white;
                             width: 100%;
                             height: 200px;
                         }
 
-                        .card-content{
+                        .card-content {
                             margin: 0;
                         }
                     }
                 }
             }
+
+            &.border-partition {
+                background-color: $surface;
+                margin-top: -1rem;
+
+                .a-wrap {
+                    @include mdc-elevation(0);
+                    margin: 0;
+                    position: relative;
+                    border: none;
+
+                    .widget-entry-card {
+                        .card-thumb {
+                            min-height: 100px;
+                            height: 100px;
+                            width: 100px;
+                            margin: 0.5rem;
+
+                            img {
+                                border-radius: 8px;
+                            }
+                        }
+                    }
+
+                    &+.a-wrap::before {
+                        content: '';
+                        display: block;
+                        height: 1px;
+                        background-color: $on-surface;
+                        width: 90%;
+                        margin: auto;
+                        opacity: 0.3;
+                    }
+                }
+            }
+
+            &.border-square {
+                .a-wrap {
+                    @include mdc-elevation(0);
+                }
+            }
+
+            &.card-arrow .a-wrap {
+                .widget-entry-card {
+                    .card-content {
+                        margin: 0;
+                    }
+                }
+
+                &::after {
+                    position: absolute;
+                    top: unset;
+                    bottom: 0.5rem;
+                    right: 0.5rem;
+                    font-family: 'FontAwesome';
+                    content: '\f061';
+                    text-transform: uppercase;
+                    color: $primary;
+                    //background-color: $primary;
+                    margin: auto;
+                    font-size: 0.875rem;
+                    text-align: center;
+                    height: 2rem;
+                    width: 2rem;
+                    line-height: 2rem;
+                    border: none;
+                    margin-top: 0;
+                    transform: none;
+                }
+            }
         }
     }
-
-
 }
