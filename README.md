@@ -2,7 +2,9 @@
 
 Cocoon用のマテリアルデザインベースのスキンです。
 
-作者ブログ [hobbby.net](https://www.hobbby.net) いつか固定ページ作ります。
+[作者ブログ](https://www.hobbby.net) 
+
+[スキン紹介](https://www.hobbby.net/material)
 
 ## ToDo
 
@@ -13,3 +15,4 @@ Cocoon用のマテリアルデザインベースのスキンです。
 
 ### 時期未定
 - 検索ボタン等のアニメーションをいじる
+- コメントのスタイる
