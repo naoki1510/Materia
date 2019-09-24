@@ -631,34 +631,34 @@
   /* 記事一覧 */
   /* コメント */
   /* 検索 */ }
-  .sidebar .widget-sidebar .widget-entry-cards .a-wrap {
+  .sidebar .widget-sidebar.widget_new_entries .widget-entry-cards .a-wrap {
     border-radius: 4px;
     background-color: white;
     color: #454545;
     padding: 0;
     margin-bottom: 1rem;
     box-shadow: 0px 2px 1px -1px rgba(0, 0, 0, 0.2), 0px 1px 1px 0px rgba(0, 0, 0, 0.14), 0px 1px 3px 0px rgba(0, 0, 0, 0.12); }
-    .sidebar .widget-sidebar .widget-entry-cards .a-wrap:hover {
+    .sidebar .widget-sidebar.widget_new_entries .widget-entry-cards .a-wrap:hover {
       box-shadow: 0px 5px 5px -3px rgba(0, 0, 0, 0.2), 0px 8px 10px 1px rgba(0, 0, 0, 0.14), 0px 3px 14px 2px rgba(0, 0, 0, 0.12); }
-    .sidebar .widget-sidebar .widget-entry-cards .a-wrap .widget-entry-card {
+    .sidebar .widget-sidebar.widget_new_entries .widget-entry-cards .a-wrap .widget-entry-card {
       display: flex;
       flex-direction: row;
       align-items: center;
       box-sizing: border-box;
       font-size: 1rem; }
-      .sidebar .widget-sidebar .widget-entry-cards .a-wrap .widget-entry-card .card-thumb {
+      .sidebar .widget-sidebar.widget_new_entries .widget-entry-cards .a-wrap .widget-entry-card .card-thumb {
         width: 25vw;
         max-width: 140px;
         min-height: 140px;
         margin: 0;
         align-self: stretch; }
-        .sidebar .widget-sidebar .widget-entry-cards .a-wrap .widget-entry-card .card-thumb img {
+        .sidebar .widget-sidebar.widget_new_entries .widget-entry-cards .a-wrap .widget-entry-card .card-thumb img {
           -o-object-fit: cover;
              object-fit: cover;
           height: 100%;
           border-top-left-radius: 4px;
           border-bottom-left-radius: 4px; }
-      .sidebar .widget-sidebar .widget-entry-cards .a-wrap .widget-entry-card .card-content {
+      .sidebar .widget-sidebar.widget_new_entries .widget-entry-cards .a-wrap .widget-entry-card .card-content {
         margin-left: 0;
         position: relative;
         width: 100%;
@@ -666,55 +666,55 @@
         display: flex;
         align-self: stretch;
         flex-direction: column; }
-        .sidebar .widget-sidebar .widget-entry-cards .a-wrap .widget-entry-card .card-content .card-title {
+        .sidebar .widget-sidebar.widget_new_entries .widget-entry-cards .a-wrap .widget-entry-card .card-content .card-title {
           font-weight: bold;
           padding: 1rem; }
-  .sidebar .widget-sidebar .widget-entry-cards.card-large-image .a-wrap .widget-entry-card {
+  .sidebar .widget-sidebar.widget_new_entries .widget-entry-cards.card-large-image .a-wrap .widget-entry-card {
     flex-direction: column;
     font-size: 1rem; }
-    .sidebar .widget-sidebar .widget-entry-cards.card-large-image .a-wrap .widget-entry-card .card-thumb {
+    .sidebar .widget-sidebar.widget_new_entries .widget-entry-cards.card-large-image .a-wrap .widget-entry-card .card-thumb {
       background-color: white;
       width: 100%;
       max-width: 100%;
       height: 200px;
       max-height: 200px; }
-    .sidebar .widget-sidebar .widget-entry-cards.card-large-image .a-wrap .widget-entry-card .card-content {
+    .sidebar .widget-sidebar.widget_new_entries .widget-entry-cards.card-large-image .a-wrap .widget-entry-card .card-content {
       margin: 0; }
-  .sidebar .widget-sidebar .widget-entry-cards.large-thumb-on .a-wrap:hover {
+  .sidebar .widget-sidebar.widget_new_entries .widget-entry-cards.large-thumb-on .a-wrap:hover {
     opacity: 1; }
-  .sidebar .widget-sidebar .widget-entry-cards.large-thumb-on .a-wrap .widget-entry-card .card-content {
+  .sidebar .widget-sidebar.widget_new_entries .widget-entry-cards.large-thumb-on .a-wrap .widget-entry-card .card-content {
     position: absolute;
     max-height: 100%;
     padding: 0;
     background-color: transparent;
     text-shadow: 2px 2px 6px dimgray; }
-  .sidebar .widget-sidebar .widget-entry-cards.border-partition {
+  .sidebar .widget-sidebar.widget_new_entries .widget-entry-cards.border-partition {
     background-color: white;
     margin-top: -1rem; }
-    .sidebar .widget-sidebar .widget-entry-cards.border-partition .a-wrap {
+    .sidebar .widget-sidebar.widget_new_entries .widget-entry-cards.border-partition .a-wrap {
       box-shadow: 0px 0px 0px 0px rgba(0, 0, 0, 0.2), 0px 0px 0px 0px rgba(0, 0, 0, 0.14), 0px 0px 0px 0px rgba(0, 0, 0, 0.12);
       margin: 0;
       position: relative;
       border: none; }
-      .sidebar .widget-sidebar .widget-entry-cards.border-partition .a-wrap .widget-entry-card .card-thumb {
+      .sidebar .widget-sidebar.widget_new_entries .widget-entry-cards.border-partition .a-wrap .widget-entry-card .card-thumb {
         min-height: 100px;
         height: 100px;
         width: 100px;
         margin: 0.5rem; }
-        .sidebar .widget-sidebar .widget-entry-cards.border-partition .a-wrap .widget-entry-card .card-thumb img {
+        .sidebar .widget-sidebar.widget_new_entries .widget-entry-cards.border-partition .a-wrap .widget-entry-card .card-thumb img {
           border-radius: 8px; }
-      .sidebar .widget-sidebar .widget-entry-cards.border-partition .a-wrap + .a-wrap::before {
+      .sidebar .widget-sidebar.widget_new_entries .widget-entry-cards.border-partition .a-wrap + .a-wrap::before {
         content: '';
         display: block;
         height: 1px;
         background-color: #454545;
         margin: 0 0.5rem;
         opacity: 0.1; }
-  .sidebar .widget-sidebar .widget-entry-cards.border-square .a-wrap {
+  .sidebar .widget-sidebar.widget_new_entries .widget-entry-cards.border-square .a-wrap {
     box-shadow: 0px 0px 0px 0px rgba(0, 0, 0, 0.2), 0px 0px 0px 0px rgba(0, 0, 0, 0.14), 0px 0px 0px 0px rgba(0, 0, 0, 0.12); }
-  .sidebar .widget-sidebar .widget-entry-cards.card-arrow .a-wrap .widget-entry-card .card-content {
+  .sidebar .widget-sidebar.widget_new_entries .widget-entry-cards.card-arrow .a-wrap .widget-entry-card .card-content {
     margin: 0; }
-  .sidebar .widget-sidebar .widget-entry-cards.card-arrow .a-wrap::after {
+  .sidebar .widget-sidebar.widget_new_entries .widget-entry-cards.card-arrow .a-wrap::after {
     position: absolute;
     top: unset;
     bottom: 0.5rem;
@@ -732,9 +732,78 @@
     border: none;
     margin-top: 0;
     transform: none; }
-  .sidebar .widget-sidebar .widget_search .search-box .search_edit {
-    border: none;
-    box-shadow: 0px 2px 1px -1px rgba(0, 0, 0, 0.2), 0px 1px 1px 0px rgba(0, 0, 0, 0.14), 0px 1px 3px 0px rgba(0, 0, 0, 0.12); }
+  .sidebar .widget-sidebar.widget_search {
+    background-color: white;
+    color: #454545;
+    box-shadow: 0px 2px 1px -1px rgba(0, 0, 0, 0.2), 0px 1px 1px 0px rgba(0, 0, 0, 0.14), 0px 1px 3px 0px rgba(0, 0, 0, 0.12);
+    transition: box-shadow 0.5s ease;
+    border-radius: 4px; }
+    .sidebar .widget-sidebar.widget_search .search-box {
+      padding: 0 1rem 1rem; }
+      .sidebar .widget-sidebar.widget_search .search-box .search-edit {
+        transition: all 100ms linear;
+        border: none;
+        border-bottom: 1px solid gray;
+        border-radius: 4px 4px 0 0;
+        box-sizing: border-box;
+        font-size: 1rem;
+        line-height: 1.75rem;
+        font-weight: 400;
+        height: 56px;
+        -webkit-appearance: none;
+        overflow: visible;
+        padding: 20px 16px 6px; }
+        .sidebar .widget-sidebar.widget_search .search-box .search-edit::-webkit-input-placeholder {
+          position: relative;
+          top: 0;
+          transition: all 150ms ease; }
+        .sidebar .widget-sidebar.widget_search .search-box .search-edit::-moz-placeholder {
+          position: relative;
+          top: 0;
+          transition: all 150ms ease; }
+        .sidebar .widget-sidebar.widget_search .search-box .search-edit:-ms-input-placeholder {
+          position: relative;
+          top: 0;
+          transition: all 150ms ease; }
+        .sidebar .widget-sidebar.widget_search .search-box .search-edit::-ms-input-placeholder {
+          position: relative;
+          top: 0;
+          transition: all 150ms ease; }
+        .sidebar .widget-sidebar.widget_search .search-box .search-edit::placeholder {
+          position: relative;
+          top: 0;
+          transition: all 150ms ease; }
+        .sidebar .widget-sidebar.widget_search .search-box .search-edit:focus {
+          border-color: #0277bd;
+          border-width: 2px;
+          outline: 0; }
+          .sidebar .widget-sidebar.widget_search .search-box .search-edit:focus::-webkit-input-placeholder {
+            font-size: 0.5rem;
+            top: -2em;
+            z-index: 100;
+            color: #0277bd; }
+          .sidebar .widget-sidebar.widget_search .search-box .search-edit:focus::-moz-placeholder {
+            font-size: 0.5rem;
+            top: -2em;
+            z-index: 100;
+            color: #0277bd; }
+          .sidebar .widget-sidebar.widget_search .search-box .search-edit:focus:-ms-input-placeholder {
+            font-size: 0.5rem;
+            top: -2em;
+            z-index: 100;
+            color: #0277bd; }
+          .sidebar .widget-sidebar.widget_search .search-box .search-edit:focus::-ms-input-placeholder {
+            font-size: 0.5rem;
+            top: -2em;
+            z-index: 100;
+            color: #0277bd; }
+          .sidebar .widget-sidebar.widget_search .search-box .search-edit:focus::placeholder {
+            font-size: 0.5rem;
+            top: -2em;
+            z-index: 100;
+            color: #0277bd; }
+    .sidebar .widget-sidebar.widget_search .search-submit {
+      margin: 0.7rem 1rem 1rem; }
 
 .pagination-next {
   display: none; }
