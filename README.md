@@ -4,7 +4,7 @@ Cocoon用のマテリアルデザインベースのスキンです。
 
 [作者ブログ](https://www.hobbby.net) 
 
-[スキン紹介](https://www.hobbby.net/material)
+[スキン紹介](https://www.hobbby.net/materia)
 
 ## ToDo
 
