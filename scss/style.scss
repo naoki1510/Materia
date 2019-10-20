@@ -10,11 +10,13 @@
 */
 /*以下にスタイルシートを記入してください*/
 
-@import "@material/card/mdc-card/";
+//@import "@material/card/mdc-card/";
 @import "@material/elevation/mdc-elevation/";
 
 @import './colors';
 @import './common';
+@import './header';
+@import './article';
 @import './index';
 @import './sidebar';
 @import './pagination';

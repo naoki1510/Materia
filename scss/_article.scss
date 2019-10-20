@@ -1,0 +1,12 @@
+.article{
+    background-color: $surface;
+
+    .article-header{
+        position: relative;
+
+        .entry-title{
+            position: absolute;
+            z-index: 100;
+        }
+    }
+}

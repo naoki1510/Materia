@@ -8,7 +8,7 @@
     border-radius: 4px;
     @include mdc-elevation(1);
     margin-top: 0;
-    
+
     .fa {
         display: inline-flex;
         justify-content: center;
@@ -36,8 +36,8 @@
         background-color: $surface;
         color: $on-surface;
         padding: 0;
+        border-radius: 4px;
         transition: mdc-elevation-transition-value(0.5s, ease);
-        @include mdc-card-shape-radius(4px);
         @include mdc-elevation(1);
 
         &:hover {
@@ -51,20 +51,31 @@
             box-sizing: border-box;
             font-size: 1rem;
 
-            @media (max-width:480px) {
+            @media (max-width: 768px) {
+                flex-direction: row-reverse;
+            }
+
+            @media (max-width: 480px) {
                 flex-direction: column;
             }
 
             .card-thumb {
                 width: 220px;
                 height: 220px;
-                margin: 0;
                 align-self: stretch;
+                margin: 0;
 
-                @media (max-width:480px) {
+                @media (max-width: 768px) {
+                    width: 150px;
+                    height: 150px;
+                    margin: 1rem;
+                }
+
+                @media (max-width: 480px) {
                     width: 100%;
                     max-height: 250px;
                     min-height: 200px;
+                    margin: 0;
                 }
 
                 img {
@@ -73,7 +84,11 @@
                     border-radius: 4px 0 0 4px;
                     align-self: stretch;
 
-                    @media (max-width:480px) {
+                    @media (max-width: 768px){
+                        border-radius: 4px;
+                    }
+
+                    @media (max-width: 480px) {
                         border-radius: 4px 4px 0 0;
                     }
                 }
@@ -106,7 +121,7 @@
                     }
 
                     &::after {
-                        content: '';
+                        content: "";
                         position: absolute;
                         bottom: 0;
                         left: 0;
@@ -132,7 +147,7 @@
                         opacity: 0.75;
                         flex-wrap: wrap;
 
-                        &>span {
+                        & > span {
                             padding: 0.25rem 0.5rem;
                             white-space: nowrap;
                             flex-wrap: nowrap;
@@ -177,7 +192,6 @@
                 }
             }
         }
-
     }
 
     /* 大きなカード */
@@ -189,6 +203,8 @@
             .card-thumb {
                 height: auto;
                 width: 100%;
+                padding: 0;
+                margin: 0;
 
                 img {
                     display: block;
@@ -196,7 +212,7 @@
                     max-height: 350px;
                     border-radius: 4px 4px 0 0;
 
-                    @media (max-width:480px) {
+                    @media (max-width: 480px) {
                         max-height: 250px;
                         min-height: 200px;
                     }
@@ -218,6 +234,8 @@
 
         .card-thumb {
             width: 100%;
+            padding: 0;
+            margin: 0;
 
             img {
                 display: block;
@@ -231,7 +249,7 @@
                 position: relative;
 
                 &::after {
-                    content: '';
+                    content: "";
                     position: absolute;
                     bottom: 0;
                     right: 0;
