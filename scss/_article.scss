@@ -1,12 +1,80 @@
-.article{
+.article {
     background-color: $surface;
 
-    .article-header{
+    .article-header {
         position: relative;
 
-        .entry-title{
+        .entry-title {
             position: absolute;
             z-index: 100;
+            top: 0;
+            height: 450px;
+            width: 100%;
+            margin: 0;
+            padding: 1rem 1rem 40px;
+            display: flex;
+            align-items: flex-end;
+            color: white;
+            letter-spacing: 1px;
+            line-height: 2em;
+            text-shadow: 0 0 2rem dimgray;
+            overflow: hidden;
         }
+
+        .eye-catch-wrap {
+            &.display-none{
+                display: block;
+            }
+
+            .eye-catch {
+                width: 100%;
+                border-radius: 4px 4px 0 0;
+                background-color: #888888;
+
+                img {
+                    border-radius: inherit;
+                    width: 100%;
+                    height: 450px;
+                    border-radius: inherit;
+                    object-fit: cover;
+                    filter: contrast(80%) brightness(90%);
+                }
+
+                .cat-label {
+                    bottom: 0;
+                    top: unset;
+                    left: 0;
+                    opacity: 1;
+                    padding: 0.25rem 1rem;
+                    border: none;
+                    color: white;
+                    background-color: unset;
+                    //font-weight: bolder;
+                    letter-spacing: 1px;
+
+                    &::before {
+                        font-family: FontAwesome;
+                        content: "";
+                        padding-right: 4px;
+                    }
+                }
+            }
+        }
+
+        .sns-share {
+        }
+
+        .date-tags {
+            line-height: 1rem;
+            z-index: 100;
+
+            span {
+                font-size: 0.875rem;
+            }
+        }
+    }
+
+    .entry-content {
+        padding: 1rem;
     }
 }
