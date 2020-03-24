@@ -1,11 +1,23 @@
-.main,
-.sidebar{
-    background-color: $background;
-    padding: 1rem 0.5rem;
+html {
+    font-size: 18px;
+
+    @media (max-width: 768px) {
+        font-size: 15px;
+    }
+
+    @media (max-width: 480px) {
+        font-size: 14px;
+    }
 }
 
-.ect-big-card-wrap{
-    .main{
+.main,
+.sidebar {
+    background-color: $background;
+    padding: 0;
+}
+
+.ect-big-card-wrap {
+    .main {
         max-width: 860px;
         margin: auto;
     }

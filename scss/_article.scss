@@ -1,47 +1,86 @@
 .article {
     background-color: $surface;
+    box-shadow: 0 1px 3px 0 rgba(0,0,0,.1);
+    //@include mdc-elevation(1);
+    //box-shadow: 0 0 6px rgba(0, 0, 0, 0.28);
 
     .article-header {
         position: relative;
+        //height: 450px;
+        width: 100%;
+        display: flex;
+        align-items: flex-end;
+        justify-content: flex-end;
+        flex-direction: column;
+        //background-color: $primary;
+
+        @media (max-width: 768px) {
+            //height: 400px;
+        }
+
+        @media (max-width: 480px) {
+            //height: 350px;
+        }
+
+        &::after {
+            content: "";
+            display: block;
+            width: 96%;
+            height: 1px;
+            opacity: 0.5;
+            margin: 1rem auto;
+            background-color: $on-surface;
+        }
 
         .entry-title {
             position: absolute;
-            z-index: 100;
-            top: 0;
             height: 450px;
+            top: 0;
+            z-index: 1;
             width: 100%;
             margin: 0;
-            padding: 1rem 1rem 40px;
+            padding: 1rem 2rem 2rem;
+            color: white;
+            letter-spacing: 2px;
+            line-height: 2em;
+            overflow: hidden;
             display: flex;
             align-items: flex-end;
-            color: white;
-            letter-spacing: 1px;
-            line-height: 2em;
-            text-shadow: 0 0 2rem dimgray;
-            overflow: hidden;
+
+            @media (max-width: 768px) {
+                line-height: 1.8em;
+            }
+
+            @media (max-width: 480px) {
+                line-height: 1.5em;
+            }
         }
 
         .eye-catch-wrap {
-            &.display-none{
+            height: 450px;
+
+            &.display-none {
                 display: block;
             }
 
             .eye-catch {
                 width: 100%;
-                border-radius: 4px 4px 0 0;
+                height: 100%;
+                margin: 0;
+                //border-radius: 4px 4px 0 0;
                 background-color: #888888;
 
                 img {
                     border-radius: inherit;
                     width: 100%;
-                    height: 450px;
+                    height: 100%;
                     border-radius: inherit;
                     object-fit: cover;
-                    filter: contrast(80%) brightness(90%);
+                    filter: contrast(80%) brightness(60%);
                 }
 
                 .cat-label {
-                    bottom: 0;
+                    bottom: 0px;
                     top: unset;
                     left: 0;
                     opacity: 1;
@@ -62,19 +101,99 @@
         }
 
         .sns-share {
+            width: 100%;
+            padding: 1rem 1rem 5px;
+
+            .share-button {
+                border-color: $on-surface;
+                color: $on-surface;
+                transition: all ease 300ms;
+
+                &:hover {
+                    background-color: $on-surface;
+                    color: $surface;
+                    opacity: 1;
+                }
+            }
         }
 
         .date-tags {
             line-height: 1rem;
-            z-index: 100;
+            z-index: 1;
+            color: $on-surface;
+            padding: 0.25rem 0.5rem;
+            margin: 0;
 
             span {
-                font-size: 0.875rem;
+                font-size: 14px;
+
+                @media screen and (max-width: 834px) {
+                    font-size: 10px;
+                }
             }
         }
     }
 
     .entry-content {
+        padding: 0 2rem;
+        margin: 0;
+
+        .wp-block-embed {
+            .blogcard-wrap {
+                margin: 0;
+                width: 100%;
+
+                .blogcard {
+                    display: flex;
+                    flex-direction: row;
+                    overflow: hidden;
+
+                    .blogcard-thumbnail {
+                        width: 150px;
+                        height: 150px;
+                        align-self: stretch;
+                        margin: 0;
+
+                        img {
+                            object-fit: cover;
+                            height: 100%;
+                            border-radius: 4px;
+                            align-self: stretch;
+                        }
+                    }
+
+                    .blogcard-content{
+                        margin: 0;
+                        padding: 0;
+                        height: auto;
+                        flex: 1;
+                    }
+                }
+            }
+        }
+    }
+
+    .entry-footer {
         padding: 1rem;
+    }
+
+    .sns-share,
+    .sns-follow {
+        .share-button,
+        .follow-button {
+            display: flex;
+            flex-direction: row;
+            justify-content: center;
+            background-color: unset;
+            border: 1px solid $on-surface;
+            border-radius: 4px;
+            color: $on-surface;
+            padding: 1rem;
+
+            .button-caption {
+                font-weight: bold;
+                padding-left: 0.5rem;
+            }
+        }
     }
 }

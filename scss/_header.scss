@@ -1,9 +1,15 @@
 .header-container {
     background-color: $primary;
     color: $on-primary;
+    box-shadow: 0 0 6px rgba(0, 0, 0, 0.5);
+    padding: 0.1rem 0;
 
     .header-container-in {
         .header {
+            @media (max-width: 834px) {
+                display: none;
+            }
+
             .header-in {
                 .logo {
                     .site-name {
@@ -18,54 +24,80 @@
         background-color: inherit;
 
         .navi-in {
-            .menu-item {
-                position: relative;
-                width: auto;
-
-                a {
-                    color: inherit;
-                    position: relative;
-                    padding: 0 1.8rem;
-
-                    &:hover {
-                        background-color: inherit;
-                    }
-                }
-
-                &:hover {
-                    &::before {
-                        opacity: 0.04;
-                    }
-                }
-
-                &::before {
+            margin-left: 1rem;
+            .menu-header {
+                align-items: center;
+                &::before{
                     content: "";
-                    position: absolute;
-                    top: 0;
-                    left: 0;
-                    right: 0;
-                    height: 100%;
+                    height: 2rem;
                     background-color: $on-primary;
-                    transition: all 300ms ease;
-                    opacity: 0;
+                    width: 1px;
+                    opacity: 0.44;
+                    margin-left: auto;
+                    margin-right: 1.99rem;
                 }
 
-                .sub-menu {
-                    background-color: $surface;
-                    color: $on-surface;
-                    padding: 8px 0;
-                    @include mdc-elevation(8);
-                    z-index: 800;
-                    border-radius: 4px;
+                .menu-item {
+                    position: relative;
+                    width: auto;
 
-                    .menu-item {
-                        &::before {
-                            background-color: $on-surface;
+                    a {
+                        transition: all 250ms ease;
+                        color: inherit;
+                        position: relative;
+                        padding: 0 1.8rem;
+                        font-size: 0.875rem;
+                        opacity: 0.88;
+
+                        &:hover {
+                            background-color: inherit;
+                            opacity: 1;
+                        }
+
+                        &::after {
+                            display: none;
                         }
                     }
 
-                    ul {
-                        margin-top: -8px;
+                    &:hover {
+                        &::before {
+                            opacity: 0.04;
+                        }
+                    }
+
+                    &::before {
+                        content: "";
+                        position: absolute;
+                        top: 0;
+                        left: 0;
+                        right: 0;
+                        height: 100%;
+                        background-color: $on-primary;
+                        transition: all 300ms ease;
+                        opacity: 0;
+                    }
+
+                    .top-has-sub {
+                        display: none;
+                    }
+
+                    .sub-menu {
+                        background-color: $surface;
+                        color: $on-surface;
+                        padding: 8px 0;
+                        @include mdc-elevation(8);
+                        z-index: 800;
+                        border-radius: 4px;
+
+                        .menu-item {
+                            &::before {
+                                background-color: $on-surface;
+                            }
+                        }
+
+                        ul {
+                            margin-top: -8px;
+                        }
                     }
                 }
             }
