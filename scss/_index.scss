@@ -253,6 +253,7 @@
     }
 
     /* タイル */
+    /*
     &.ect-vertical-card .a-wrap {
         @media screen and (max-width: 768px) {
             display: block;
@@ -295,9 +296,9 @@
                 margin-top: 0;
             }
         }
-    }
+    }*/
 
-    /*
+    
     &.ect-vertical-card {
         .a-wrap {
             @include mdc-elevation(0);
@@ -308,6 +309,48 @@
 
             @media (max-width: 768px) {
                 width: 100%;
+            }
+
+            @media screen and (max-width: 768px) {
+                display: block;
+                width: 100%;
+            }
+    
+            .entry-card {
+                flex-direction: column;
+            }
+    
+            .card-thumb {
+                width: 100%;
+                padding: 0;
+                margin: 0;
+    
+                img {
+                    display: block;
+                    border-radius: 4px 4px 0 0;
+                }
+            }
+    
+            .entry-card-content {
+                .entry-card-snippet {
+                    margin-top: auto;
+                    position: relative;
+    
+                    &::after {
+                        content: "";
+                        position: absolute;
+                        bottom: 0;
+                        right: 0;
+                        left: 0;
+                        height: 0.5rem;
+                        background: linear-gradient(to bottom, rgba(255, 255, 255, 0), rgba(255, 255, 255, 1) 80%);
+                    }
+                }
+    
+                .entry-card-meta {
+                    position: relative;
+                    margin-top: 0;
+                }
             }
 
             &::before {
@@ -352,5 +395,5 @@
                 }
             }
         }
-    }*/
+    }
 }

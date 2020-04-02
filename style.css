@@ -349,58 +349,46 @@ html {
   /* 大きなカード */
   /* タイル */
   /*
-    &.ect-vertical-card {
-        .a-wrap {
-            @include mdc-elevation(0);
-            border-radius: 0;
+    &.ect-vertical-card .a-wrap {
+        @media screen and (max-width: 768px) {
+            display: block;
+            width: 100%;
+        }
+
+        .entry-card {
+            flex-direction: column;
+        }
+
+        .card-thumb {
+            width: 100%;
+            padding: 0;
             margin: 0;
-            padding: 1rem;
-            width: 50%;
 
-            @media (max-width: 768px) {
-                width: 100%;
+            img {
+                display: block;
+                border-radius: 4px 4px 0 0;
             }
+        }
 
-            &::before {
-                content: '';
-                position: absolute;
-                top: 0;
-                left: 0;
-                right: 0;
-                bottom: 0;
-                border: 1px solid $primary;
-                transition: opacity 0.3s ease;
-                opacity: 0;
-            }
-            
-            &::after {
-                content: '';
-                position: absolute;
-                top: 0;
-                left: 0;
-                right: 0;
-                bottom: 0;
-                background-color: $primary;
-                transition: opacity 0.3s ease;
-                opacity: 0;
-            }
-
-            &:hover {
-                @include mdc-elevation(0);
-
-                &::before {
-                    opacity: 0.3;
-                }
+        .entry-card-content {
+            .entry-card-snippet {
+                margin-top: auto;
+                position: relative;
 
                 &::after {
-                    opacity: 0.04;
+                    content: "";
+                    position: absolute;
+                    bottom: 0;
+                    right: 0;
+                    left: 0;
+                    height: 0.5rem;
+                    background: linear-gradient(to bottom, rgba(255, 255, 255, 0), rgba(255, 255, 255, 1) 80%);
                 }
             }
 
-            .card-thumb {
-                img {
-                    border-radius: 0;
-                }
+            .entry-card-meta {
+                position: relative;
+                margin-top: 0;
             }
         }
     }*/ }
@@ -563,33 +551,70 @@ html {
     .list.ect-big-card .a-wrap .entry-card .entry-card-content .entry-card-meta,
     .list.ect-big-card-first .a-wrap:first-of-type .entry-card .entry-card-content .entry-card-meta {
       position: relative; }
-  @media screen and (max-width: 768px) {
-    .list.ect-vertical-card .a-wrap {
-      display: block;
-      width: 100%; } }
-  .list.ect-vertical-card .a-wrap .entry-card {
-    flex-direction: column; }
-  .list.ect-vertical-card .a-wrap .card-thumb {
-    width: 100%;
-    padding: 0;
-    margin: 0; }
-    .list.ect-vertical-card .a-wrap .card-thumb img {
-      display: block;
-      border-radius: 4px 4px 0 0; }
-  .list.ect-vertical-card .a-wrap .entry-card-content .entry-card-snippet {
-    margin-top: auto;
-    position: relative; }
-    .list.ect-vertical-card .a-wrap .entry-card-content .entry-card-snippet::after {
-      content: "";
+  .list.ect-vertical-card .a-wrap {
+    box-shadow: 0px 0px 0px 0px rgba(0, 0, 0, 0.2), 0px 0px 0px 0px rgba(0, 0, 0, 0.14), 0px 0px 0px 0px rgba(0, 0, 0, 0.12);
+    border-radius: 0;
+    margin: 0;
+    padding: 1rem;
+    width: 50%; }
+    @media (max-width: 768px) {
+      .list.ect-vertical-card .a-wrap {
+        width: 100%; } }
+    @media screen and (max-width: 768px) {
+      .list.ect-vertical-card .a-wrap {
+        display: block;
+        width: 100%; } }
+    .list.ect-vertical-card .a-wrap .entry-card {
+      flex-direction: column; }
+    .list.ect-vertical-card .a-wrap .card-thumb {
+      width: 100%;
+      padding: 0;
+      margin: 0; }
+      .list.ect-vertical-card .a-wrap .card-thumb img {
+        display: block;
+        border-radius: 4px 4px 0 0; }
+    .list.ect-vertical-card .a-wrap .entry-card-content .entry-card-snippet {
+      margin-top: auto;
+      position: relative; }
+      .list.ect-vertical-card .a-wrap .entry-card-content .entry-card-snippet::after {
+        content: "";
+        position: absolute;
+        bottom: 0;
+        right: 0;
+        left: 0;
+        height: 0.5rem;
+        background: linear-gradient(to bottom, rgba(255, 255, 255, 0), white 80%); }
+    .list.ect-vertical-card .a-wrap .entry-card-content .entry-card-meta {
+      position: relative;
+      margin-top: 0; }
+    .list.ect-vertical-card .a-wrap::before {
+      content: '';
       position: absolute;
-      bottom: 0;
-      right: 0;
+      top: 0;
       left: 0;
-      height: 0.5rem;
-      background: linear-gradient(to bottom, rgba(255, 255, 255, 0), white 80%); }
-  .list.ect-vertical-card .a-wrap .entry-card-content .entry-card-meta {
-    position: relative;
-    margin-top: 0; }
+      right: 0;
+      bottom: 0;
+      border: 1px solid #0277bd;
+      transition: opacity 0.3s ease;
+      opacity: 0; }
+    .list.ect-vertical-card .a-wrap::after {
+      content: '';
+      position: absolute;
+      top: 0;
+      left: 0;
+      right: 0;
+      bottom: 0;
+      background-color: #0277bd;
+      transition: opacity 0.3s ease;
+      opacity: 0; }
+    .list.ect-vertical-card .a-wrap:hover {
+      box-shadow: 0px 0px 0px 0px rgba(0, 0, 0, 0.2), 0px 0px 0px 0px rgba(0, 0, 0, 0.14), 0px 0px 0px 0px rgba(0, 0, 0, 0.12); }
+      .list.ect-vertical-card .a-wrap:hover::before {
+        opacity: 0.3; }
+      .list.ect-vertical-card .a-wrap:hover::after {
+        opacity: 0.04; }
+    .list.ect-vertical-card .a-wrap .card-thumb img {
+      border-radius: 0; }
 
 .sidebar {
   padding: 0; }
