@@ -1,5 +1,4 @@
 .sidebar {
-    padding: 0;
 
     .widget {
         background-color: $surface;
@@ -7,18 +6,34 @@
         margin: 0 0 1rem;
 
         h3 {
-            background-color: $primary;
-            color: $on-primary;
+            position: relative;
+            background-color: $surface;
+            color: $on-surface;
             border-radius: 0;
             margin: 0;
             padding: 1rem 1rem;
             letter-spacing: 1px;
             font-size: 1rem;
-            font-weight: normal;
+            font-weight: bold;
             line-height: 1.28rem;
-            display: flex;
-            align-items: center;
+            //display: flex;
+            //align-items: center;
+            text-align: center;
 
+            &::after{
+                content: '';
+                position: absolute;
+                bottom: 8px;
+                display: block;
+                height: 1px;
+                width: 80%;
+                left: 10%;
+                right: 10%;
+                margin: auto;
+                background-color: $on-surface;
+                opacity: 0.6;
+            }
+            /*
             &::before,
             &::after{
                 content: '';content: "";
@@ -34,7 +49,7 @@
 
             &::after{
                 margin-left: 1rem;
-            }
+            }*/
         }
 
         &.widget-sidebar {
@@ -51,10 +66,10 @@
                         color: $on-surface;
                         padding: 0;
                         margin-top: 1rem;
-                        @include mdc-elevation(1);
+                        //@include mdc-elevation(1);
 
                         &:hover {
-                            @include mdc-elevation(8);
+                            //@include mdc-elevation(8);
                         }
 
                         .widget-entry-card {
@@ -90,8 +105,9 @@
                                 flex-direction: column;
 
                                 .card-title {
-                                    font-weight: bold;
+                                    font-weight: normal;
                                     padding: 1rem;
+                                    font-size: 1rem;
 
                                     @media (max-width:768px){
                                         font-size: 1rem;
@@ -149,7 +165,7 @@
                         border-radius: 0 0 4px 4px;
 
                         .a-wrap {
-                            @include mdc-elevation(0);
+                            //@include mdc-elevation(0);
                             margin: 0;
                             position: relative;
                             border: none;
@@ -204,7 +220,7 @@
 
                     &.border-square {
                         .a-wrap {
-                            @include mdc-elevation(0);
+                            //@include mdc-elevation(0);
                         }
                     }
 

@@ -13,6 +13,7 @@
             .header-in {
                 .logo {
                     .site-name {
+                        padding: 0 1rem ;
                         color: inherit;
                     }
                 }
@@ -85,7 +86,7 @@
                         background-color: $surface;
                         color: $on-surface;
                         padding: 8px 0;
-                        @include mdc-elevation(8);
+                        //@include mdc-elevation(8);
                         z-index: 800;
                         border-radius: 4px;
 

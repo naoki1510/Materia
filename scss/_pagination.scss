@@ -5,7 +5,7 @@
 .pagination {
     border-radius: 4px;
     overflow: hidden;
-    @include mdc-elevation(1);
+    //@include mdc-elevation(1);
 
     .page-numbers {
         background-color: $surface;
