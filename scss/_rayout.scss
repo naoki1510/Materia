@@ -1,0 +1,24 @@
+/* コンテナ等の配置に関するデザイン */
+// 1.サイドバーの幅を固定したい
+
+.content-in{
+    display: flex;
+    flex-direction: row;
+    flex-wrap: nowrap;
+
+    .main{
+        flex-grow: 1;
+        margin: 0;
+    }
+
+    .sidebar{
+        width: 376px;
+    }
+}
+
+// 2.メインとサイドバーの背景色リセット
+
+.main,
+.sidebar{
+    background-color: inherit;
+}
