@@ -7,7 +7,7 @@
     padding: 1rem;
     margin-top: 0;
     border-radius: 4px;
-    box-shadow: 0px 1px 2px rgba(0 ,0 ,0 ,0.2);
+    box-shadow: 0px 1px 2px rgba(0, 0, 0, 0.2);
 
     .fa {
         margin-right: 1rem;
@@ -15,49 +15,210 @@
 }
 
 /* リスト */
-.a-wrap{
+
+// 全体に適用するやつ
+.a-wrap {
     background-color: $surface;
     color: $on-surface;
-    padding: 1rem;
+    padding: 0;
     border-radius: 4px;
+    transition: all 300ms ease;
+    box-shadow: 0px 0px 0px rgba(0, 0, 0, 0.2);
+    opacity: 1;
 
-    &:hover{
-        //hover時のアクション
+    // hover時アクション
+    &:hover {
+        background-color: $surface;
+        box-shadow: 0px 0px 6px rgba(0, 0, 0, 0.2);
+        opacity: 0.8;
     }
 
-    .entry-card{
+    .e-card {
+        // 横並びに
         display: flex;
         flex-direction: row;
-        
-        .card-thumb{
-            width: 150px;
+
+        .card-thumb {
+            // 正方形にトリミング
+            width: 200px;
             height: 150px;
+            max-width: 27vw;
+            max-height: 30vw;
             flex-shrink: 0;
             margin: 0;
+            padding: 1rem;
 
-            img{
+            img {
                 object-fit: cover;
                 height: 100%;
+                width: 100%;
                 border-radius: 4px;
             }
 
-            .cat-label{
+            // カテゴリーラベルは別の場所に表示
+            .cat-label {
                 display: none;
             }
         }
 
-        .entry-card-content{
+        .card-content {
+            position: relative;
             margin: 0;
             padding: 0;
             flex-grow: 1;
+            height: 150px;
+            max-height: 30vw;
+            overflow: hidden;
 
-            .entry-card-title{
-                padding: 0.5rem 1rem;
+            .card-title {
+                padding: 1rem;
+                margin: 0;
             }
 
-            .entry-card-snippet{
-                padding: 0.5rem 1rem;
+            .card-snippet {
+                padding: 0rem 1rem;
+                max-height: 5.5em;
             }
+
+            .card-meta {
+                background: linear-gradient(to bottom, rgba(255, 255, 255, 0), $surface 1rem);
+                padding: 1rem 1rem 0;
+                width: 100%;
+                border-radius: 4px;
+
+                span {
+                    padding: 0;
+                    margin-right: 0.5em;
+                }
+            }
+        }
+    }
+}
+
+// でかいサムネイル
+.ect-big-card-first .a-wrap:first-of-type,
+.ect-big-card .a-wrap,
+.ect-vertical-card .a-wrap {
+    padding: 0;
+
+    .e-card {
+        flex-direction: column;
+
+        .card-thumb {
+            position: relative;
+            padding: 0;
+            width: 100%;
+            height: auto;
+            max-width: unset;
+            max-height: unset;
+
+            &::before {
+                content: "";
+                display: block;
+                padding-top: 50%;
+            }
+
+            img {
+                position: absolute;
+                top: 0;
+                border-radius: 4px 4px 0 0;
+            }
+        }
+
+        .card-content {
+            padding: 0.7rem 0;
+            height: auto;
+            max-height: unset;
+
+            .card-snippet {
+                max-height: unset;
+            }
+
+            .card-meta {
+                position: static;
+                padding: 0 1rem;
+                display: flex;
+                flex-direction: row-reverse;
+                align-items: center;
+            }
+        }
+    }
+}
+
+.ect-vertical-card .a-wrap {
+    .e-card .card-content .card-meta {
+        position: absolute;
+        bottom: 0;
+        background: linear-gradient(to bottom, rgba(255, 255, 255, 0), $surface 0.5rem);
+
+        .entry-card-categorys {
+            display: none;
+        }
+    }
+}
+
+// ページネーション
+.pagination {
+    display: flex;
+    border-radius: 4px;
+    overflow: hidden;
+    box-shadow: 0 1px 4px rgba(0, 0, 0, 0.2);
+    width: fit-content;
+    margin: 24px auto;
+
+    .page-numbers {
+        display: inline-block;
+        width: fit-content;
+        background-color: $surface;
+        position: relative;
+        font-size: 0.875rem;
+        line-height: 48px;
+        height: 48px;
+        font-weight: 500;
+        padding: 0 24px;
+        margin: 0;
+        flex: 1 0 auto;
+        border: none;
+        border-radius: 0;
+
+        &.current {
+            color: $primary;
+            border-bottom: 2px solid $primary;
+        }
+
+        &:hover {
+            background-color: $surface;
+
+            &::after {
+                content: "";
+                position: absolute;
+                top: 0;
+                bottom: 0;
+                left: 0;
+                right: 0;
+                background-color: $primary;
+                opacity: 0.04;
+            }
+        }
+    }
+}
+
+.pagination-next {
+    width: fit-content;
+    margin-left: auto;
+
+    a {
+        background-color: $primary;
+        color: $on-primary;
+        font-size: 1rem;
+        border: none;
+        border-radius: 4px;
+        padding: 0.5rem 1rem;
+
+        &:hover{
+            background-color: $primary;
+            color: $on-primary;
+            opacity: 0.8;
         }
     }
 }

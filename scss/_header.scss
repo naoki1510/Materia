@@ -6,8 +6,6 @@
 
 // 2.背景色の変更・影の追加
 .header-container{
-    background-color: $primary;
-    color: $on-primary;
     box-shadow: 0 0 6px rgba(0, 0, 0, 0.5);
     .site-name{
         color: inherit;
@@ -24,7 +22,6 @@
             width: auto; // 幅固定を解除
 
             a{
-                color: inherit;
                 padding: 0 1.8em; // 左右の余白
                 opacity: 0.88; // hover時のアニメーション用
 
@@ -55,6 +52,7 @@
                 color: $on-surface;
                 z-index: 800;
                 border-radius: 4px;
+                box-shadow: 0 0 4px rgba(0, 0, 0, 0.2);
 
                 .menu-item::before{
                     background-color: $on-surface;

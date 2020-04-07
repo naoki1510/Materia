@@ -12,13 +12,13 @@
     }
 
     .sidebar{
-        width: 376px;
+        flex-shrink: 0;
     }
 }
 
 // 2.メインとサイドバーの背景色リセット
 
-.main,
-.sidebar{
+#main.main,
+#sidebar.sidebar{
     background-color: inherit;
 }

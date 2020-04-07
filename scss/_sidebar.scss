@@ -1,0 +1,97 @@
+#sidebar {
+    margin: 0;
+
+    .widget {
+        background-color: $surface;
+        color: $on-surface;
+        padding: 1rem;
+        margin-bottom: 1rem;
+
+        h3 {
+            background-color: transparent;
+            margin: 0;
+            border-bottom: 1px solid #888888;
+            border-radius: 0;
+            line-height: 1;
+        }
+
+        // 記事一覧
+        .widget-entry-cards {
+            .a-wrap {
+                padding: 0;
+                margin-top: 1rem;
+                box-shadow: 0 0 4px rgba(0, 0, 0, 0.2);
+
+                .widget-entry-card {
+                    .card-thumb {
+                        padding: 0.5rem;
+                        height: 110px;
+                        width: 120px;
+                    }
+
+                    .card-content {
+                        height: 100px;
+
+                        .card-title {
+                            padding: 0.5rem;
+                            font-size: 0.9rem;
+                        }
+                    }
+                }
+            }
+
+            &.border-partition,
+            &.border-square {
+                .a-wrap {
+                    box-shadow: none;
+                    &:hover {
+                        box-shadow: none;
+                    }
+                }
+            }
+
+            &.large-thumb,
+            &.large-thumb-on {
+                .a-wrap {
+                    margin-top: 1rem;
+                    .widget-entry-card {
+                        flex-direction: column;
+
+                        .card-thumb {
+                            padding: 0;
+                            width: 100%;
+                            height: 140px;
+
+                            img{
+                                border-radius: 4px 4px 0 0;
+                            }
+                        }
+
+                        .card-content{
+                            height: auto;
+                        }
+                    }
+                }
+            }
+
+            &.large-thumb-on{
+                .a-wrap{
+                    .widget-entry-card{
+                        .card-thumb{
+                            width: 100%;
+                            height: 180px;
+                        }
+
+                        .card-content{
+                            position: absolute;
+                            height: 180px;
+                            display: flex;
+                            flex-direction: column;
+                            justify-content: flex-end;
+                        }
+                    }
+                }
+            }
+        }
+    }
+}

@@ -1,0 +1,183 @@
+.article {
+    background-color: $surface;
+    box-shadow: 0 1px 3px rgba(0, 0, 0, 0.2);
+
+    .article-header {
+        position: relative;
+
+        // 下のセパレーター
+        &::after {
+            content: "";
+            display: block;
+            width: 96%;
+            height: 1px;
+            opacity: 0.5;
+            margin: 1rem auto;
+            background-color: $on-surface;
+        }
+
+        .entry-title {
+            position: absolute;
+            height: 450px;
+            max-height: 60vw;
+            top: 0;
+            z-index: 1;
+            width: 100%;
+            margin: 0;
+            padding: 2rem;
+            color: white;
+            line-height: 1.5em;
+            display: flex;
+            align-items: flex-end;
+        }
+
+        .eye-catch-wrap {
+            height: 450px;
+            max-height: 60vw;
+            width: 100%;
+
+            &.display-none {
+                display: block;
+            }
+
+            .eye-catch {
+                width: 100%;
+                height: 100%;
+                margin: 0;
+                background-color: #888888;
+                position: relative;
+
+                img {
+                    width: 100%;
+                    height: 100%;
+                    object-fit: cover;
+                    filter: contrast(80%) brightness(60%);
+                }
+
+                .cat-label {
+                    opacity: 1;
+                    border: none;
+                    background-color: transparent;
+
+                    &::before {
+                        font-family: FontAwesome;
+                        content: "";
+                        padding-right: 4px;
+                    }
+                }
+            }
+        }
+    }
+
+    .sns-share {
+        width: 100%;
+        padding: 1rem 1rem 5px;
+
+        .share-button {
+            transition: all ease 300ms;
+        }
+    }
+
+    .date-tags {
+        line-height: 1rem;
+        color: $on-surface;
+        padding: 0.25rem 0.5rem;
+        margin: 0;
+
+        span {
+            font-size: 14px;
+        }
+    }
+}
+
+.entry-content{
+    padding: 1rem;
+
+    h2{
+        background-color: #eef8ff;
+        color: #454545;
+        border-bottom: 3px solid $primary;
+        border-radius: 0;
+        padding: 1rem 1em;
+    }
+
+    h3{
+        border: none;
+        border-left: 8px solid #aaddff;
+        //border-bottom: 1px solid $primary;
+        padding: 0.5em;
+    }
+}
+
+.entry-footer{
+    padding: 1rem;
+
+    .sns-share{
+        padding: 0;
+    }
+}
+
+.toc{
+    padding: 0;
+    border: 2px solid $primary;
+    border-radius: 4px;
+
+    .toc-title{
+        background-color: $primary;
+        color: $on-primary;
+    }
+
+    .toc-content{
+        padding: 1rem;
+    }
+}
+
+.blogcard{
+    position: relative;
+    padding: 0 0 1rem;
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+
+    .blogcard-thumbnail{
+        margin: 0;
+        padding: 1rem 1rem 0;
+        height: 160px;
+        width: 200px;
+        flex-shrink: 0;
+
+        img{
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+            border-radius: 4px;
+        }
+    }
+
+    .blogcard-content{
+        margin: 0;
+        padding: 0;
+        flex-grow: 1;
+        width: min-content;
+
+        .blogcard-title{
+            padding: 1rem;
+            margin: 0;
+        }
+
+        .blogcard-snippet{
+            padding: 0 1rem;
+        }
+    }
+
+    .blogcard-footer{
+        position: absolute;
+        bottom: 0;
+        width: 100%;
+        padding: 0 1rem;
+
+        .blogcard-site{
+            float: right;
+        }
+    }
+}
