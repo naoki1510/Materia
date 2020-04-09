@@ -400,8 +400,7 @@
       line-height: 1; }
     #sidebar .widget .widget-entry-cards .a-wrap {
       padding: 0;
-      margin-top: 1rem;
-      box-shadow: 0 0 4px rgba(0, 0, 0, 0.2); }
+      margin-top: 1rem; }
       #sidebar .widget .widget-entry-cards .a-wrap .widget-entry-card .card-thumb {
         padding: 0.5rem;
         height: 110px;
