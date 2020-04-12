@@ -1,24 +1,28 @@
 /* コンテナ等の配置に関するデザイン */
 // 1.サイドバーの幅を固定したい
+// やっぱしない
+.content {
+    .content-in {
+        flex-wrap: nowrap;
+        .main,
+        .sidebar {
+            border-radius: 0;
+            border: none;
+            padding: 0;
+        }
 
-.content-in{
-    display: flex;
-    flex-direction: row;
-    flex-wrap: nowrap;
+        .main {
+            flex-grow: 1;
+            margin-right: 10px;
 
-    .main{
-        flex-grow: 1;
-        margin: 0;
+            @media (max-width: 834px) {
+                margin: 1rem 0 0 0;
+            }
+        }
+
+        .sidebar {
+            flex-shrink: 0;
+            margin: 0 0.5%;
+        }
     }
-
-    .sidebar{
-        flex-shrink: 0;
-    }
-}
-
-// 2.メインとサイドバーの背景色リセット
-
-#main.main,
-#sidebar.sidebar{
-    background-color: inherit;
 }

@@ -5,9 +5,9 @@
     background-color: $surface;
     color: $on-surface;
     padding: 1rem;
-    margin-top: 0;
-    border-radius: 4px;
-    box-shadow: 0px 1px 2px rgba(0, 0, 0, 0.2);
+    margin: 0.5rem;
+    border-radius: 0;
+    border-bottom: 1px solid #888;
 
     .fa {
         margin-right: 1rem;
@@ -18,19 +18,43 @@
 
 // 全体に適用するやつ
 .a-wrap {
+    position: relative;
     background-color: $surface;
     color: $on-surface;
-    padding: 0;
-    border-radius: 4px;
+    padding: 0.5rem;
+    margin: 0;
+    border-radius: 0;
     transition: all 300ms ease;
     box-shadow: 0px 0px 0px rgba(0, 0, 0, 0.2);
     opacity: 1;
 
+    &::after {
+        content: "";
+        transition: all 100ms ease-in-out,
+            height 50ms ease-in-out;
+        position: absolute;
+        bottom: 0;
+        left: 0.5rem;
+        right: 0.5rem;
+        height: 1px;
+        background-color: rgba(0, 0, 0, 0.13);
+        opacity: 1;
+    }
+
     // hover時アクション
     &:hover {
-        background-color: $surface;
-        box-shadow: 0px 0px 6px rgba(0, 0, 0, 0.2);
-        opacity: 0.8;
+        background-color: transparent;
+
+        &::after {
+            transition: all 200ms ease-in-out,
+                height 75ms ease-in-out;
+            background-color: rgba(221, 221, 221, 0.3);
+            bottom: 0;
+            left: 0;
+            right: 0;
+            height: 100%;
+            z-index: 200;
+        }
     }
 
     .e-card {
@@ -39,25 +63,36 @@
         flex-direction: row;
 
         .card-thumb {
-            // 正方形にトリミング
-            width: 200px;
-            height: 150px;
-            max-width: 27vw;
-            max-height: 30vw;
+            // 余白なくしたい
+            position: relative;
             flex-shrink: 0;
             margin: 0;
-            padding: 1rem;
+            padding: 0;
+
+            &::after {
+                content: "";
+                display: block;
+                padding-top: 66%;
+            }
 
             img {
+                position: absolute;
                 object-fit: cover;
                 height: 100%;
                 width: 100%;
-                border-radius: 4px;
             }
 
-            // カテゴリーラベルは別の場所に表示
+            // カテゴリーラベル
             .cat-label {
-                display: none;
+                border:none;
+                top: 0;
+                left: 0;
+                font-size: 0.8em;
+                line-height: 1;
+                padding: 0.5rem;
+                opacity: 1;
+                background-color: rgba(64, 72, 84, 0.9);
+                color: #fafafa;
             }
         }
 
@@ -66,13 +101,12 @@
             margin: 0;
             padding: 0;
             flex-grow: 1;
-            height: 150px;
-            max-height: 30vw;
             overflow: hidden;
 
             .card-title {
                 padding: 1rem;
                 margin: 0;
+                display: block;
             }
 
             .card-snippet {
@@ -110,23 +144,11 @@
             width: 100%;
             height: auto;
             max-width: unset;
-            max-height: unset;
-
-            &::before {
-                content: "";
-                display: block;
-                padding-top: 50%;
-            }
-
-            img {
-                position: absolute;
-                top: 0;
-                border-radius: 4px 4px 0 0;
-            }
+            max-height: 450px;
         }
 
         .card-content {
-            padding: 0.7rem 0;
+            padding: 0.5rem 0;
             height: auto;
             max-height: unset;
 
@@ -136,7 +158,7 @@
 
             .card-meta {
                 position: static;
-                padding: 0 1rem;
+                padding: 0.5rem 1.5rem 0;
                 display: flex;
                 flex-direction: row-reverse;
                 align-items: center;
@@ -146,14 +168,29 @@
 }
 
 .ect-vertical-card .a-wrap {
-    .e-card .card-content .card-meta {
+    .e-card .card-content {
+        padding-bottom: 2rem;
+
+        .card-meta {
+            position: absolute;
+            bottom: 0.5rem;
+            background: linear-gradient(to bottom, rgba(255, 255, 255, 0), $surface 0.5rem);
+        }
+    }
+}
+
+//広告
+.list .google-auto-placed{
+    position: relative;
+
+    &::after {
+        content: "";
         position: absolute;
         bottom: 0;
-        background: linear-gradient(to bottom, rgba(255, 255, 255, 0), $surface 0.5rem);
-
-        .entry-card-categorys {
-            display: none;
-        }
+        left: 0.5rem;
+        right: 0.5rem;
+        height: 1px;
+        background-color: rgba(0, 0, 0, 0.13);
     }
 }
 
@@ -205,7 +242,7 @@
 
 .pagination-next {
     width: fit-content;
-    margin-left: auto;
+    margin: 1rem auto 1rem auto;
 
     a {
         background-color: $primary;
@@ -215,7 +252,7 @@
         border-radius: 4px;
         padding: 0.5rem 1rem;
 
-        &:hover{
+        &:hover {
             background-color: $primary;
             color: $on-primary;
             opacity: 0.8;
