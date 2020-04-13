@@ -7,7 +7,7 @@
     padding: 1rem;
     margin: 0.5rem;
     border-radius: 0;
-    border-bottom: 1px solid #888;
+    border-bottom: 1px solid var(--site-key-color, #888);
 
     .fa {
         margin-right: 1rem;
@@ -17,7 +17,7 @@
 /* リスト */
 
 // 全体に適用するやつ
-.a-wrap {
+a.a-wrap {
     position: relative;
     background-color: $surface;
     color: $on-surface;
@@ -28,32 +28,39 @@
     box-shadow: 0px 0px 0px rgba(0, 0, 0, 0.2);
     opacity: 1;
 
+    &::before {
+        content: "";
+        transition: all 100ms ease-in-out, height 50ms ease-in-out;
+        position: absolute;
+        top: 0;
+        left: 50%;
+        width: 0;
+        bottom: 1px;
+        background-color: rgba(0, 0, 0, 0);
+        z-index: 100;
+        opacity: 0;
+    }
+
     &::after {
         content: "";
-        transition: all 100ms ease-in-out,
-            height 50ms ease-in-out;
         position: absolute;
         bottom: 0;
         left: 0.5rem;
         right: 0.5rem;
         height: 1px;
         background-color: rgba(0, 0, 0, 0.13);
-        opacity: 1;
     }
 
     // hover時アクション
     &:hover {
         background-color: transparent;
 
-        &::after {
-            transition: all 200ms ease-in-out,
-                height 75ms ease-in-out;
-            background-color: rgba(221, 221, 221, 0.3);
-            bottom: 0;
+        &::before {
+            transition: all 200ms ease-in-out, height 75ms ease-in-out;
+            background-color: var(--site-key-color, #888888);
             left: 0;
-            right: 0;
-            height: 100%;
-            z-index: 200;
+            width: 100%;
+            opacity: 0.1;
         }
     }
 
@@ -84,14 +91,13 @@
 
             // カテゴリーラベル
             .cat-label {
-                border:none;
+                border: none;
                 top: 0;
                 left: 0;
                 font-size: 0.8em;
                 line-height: 1;
-                padding: 0.5rem;
-                opacity: 1;
-                background-color: rgba(64, 72, 84, 0.9);
+                padding: 0.5em;
+                opacity: 0.9;
                 color: #fafafa;
             }
         }
@@ -180,7 +186,7 @@
 }
 
 //広告
-.list .google-auto-placed{
+.list .google-auto-placed {
     position: relative;
 
     &::after {
