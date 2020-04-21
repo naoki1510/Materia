@@ -54,7 +54,7 @@
   width: auto; }
   #navi .navi-in .menu-header .menu-item a {
     padding: 0 1.8em;
-    opacity: 0.88;
+    opacity: 0.8;
     white-space: nowrap; }
     #navi .navi-in .menu-header .menu-item a:hover {
       background-color: inherit;
@@ -68,10 +68,10 @@
     right: 0;
     bottom: 0;
     background-color: rgba(0, 0, 0, 0);
-    opacity: 0.1; }
+    opacity: 0.18; }
   #navi .navi-in .menu-header .menu-item:hover::before {
     top: 0;
-    background-color: var(--site-key-text-color, #dddddd); }
+    background-color: #dddddd; }
   #navi .navi-in .menu-header .menu-item .sub-menu {
     z-index: 800;
     border-radius: 4px;
@@ -91,7 +91,7 @@
   padding: 1rem;
   margin: 0.5rem;
   border-radius: 0;
-  border-bottom: 1px solid var(--site-key-color, #888); }
+  border-bottom: 1px solid  #888; }
   .archive-title .fa {
     margin-right: 1rem; }
 
@@ -129,10 +129,10 @@ a.a-wrap {
     background-color: transparent; }
     a.a-wrap:hover::before {
       transition: all 200ms ease-in-out, height 75ms ease-in-out;
-      background-color: var(--site-key-color, #888888);
+      background-color: #888888;
       left: 0;
       width: 100%;
-      opacity: 0.1; }
+      opacity: 0.06; }
   a.a-wrap .e-card {
     display: flex;
     flex-direction: row; }
@@ -392,7 +392,7 @@ a.a-wrap {
     .article .entry-content h2,
     .article .entry-content h3,
     .article .entry-content h4 {
-      border-color: var(--site-key-color, #888888); }
+      border-color: #888888; }
 
 .entry-footer {
   padding: 1rem; }
@@ -410,7 +410,7 @@ a.a-wrap {
     top: 0;
     bottom: 0;
     border: 1px solid #888888;
-    border-color: var(--site-key-color, #888888);
+    border-color: #888888;
     width: 1rem; }
   .toc::before {
     left: 0;

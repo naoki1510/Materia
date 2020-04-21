@@ -23,7 +23,7 @@
 
             a {
                 padding: 0 1.8em; // 左右の余白
-                opacity: 0.88; // hover時のアニメーション用
+                opacity: 0.8; // hover時のアニメーション用
                 white-space: nowrap;
 
                 &:hover {
@@ -42,12 +42,12 @@
                 right: 0;
                 bottom: 0;
                 background-color: rgba(0, 0, 0, 0);
-                opacity: 0.1;
+                opacity: 0.18;
             }
 
             &:hover::before {
                 top: 0;
-                background-color: var(--site-key-text-color, #dddddd);
+                background-color:  #dddddd;
             }
 
             .sub-menu {

@@ -30,26 +30,3 @@ function is_entry_card_border_visible(){
 endif;
 
 */
-function materia_set_color_values()
-{
-
-    $properties = [
-        'site_key_color',
-        'site_key_text_color',
-        'site_background_color',
-    ];
-
-    $css = ':root {';
-
-    foreach ($properties as $property) {
-        $value = get_theme_option($property);
-        if(empty($value)) continue;
-        $css .= '--' . str_replace('_', '-', $property) . ': ' . $value . ';';
-    }
-
-    $css .= '}';
-
-    wp_add_inline_style(THEME_NAME . '-skin-style', $css);
-}
-
-add_action('wp_enqueue_scripts', 'materia_set_color_values');
