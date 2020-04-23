@@ -42,12 +42,12 @@
                 right: 0;
                 bottom: 0;
                 background-color: rgba(0, 0, 0, 0);
-                opacity: 0.18;
+                opacity: 0.15;
             }
 
             &:hover::before {
                 top: 0;
-                background-color:  #dddddd;
+                background-color:  #888888;
             }
 
             .sub-menu {

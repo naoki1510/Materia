@@ -35,7 +35,7 @@ a.a-wrap {
         top: 0;
         left: 50%;
         width: 0;
-        bottom: 1px;
+        bottom: 0;
         background-color: rgba(0, 0, 0, 0);
         z-index: 100;
         opacity: 0;
@@ -43,6 +43,7 @@ a.a-wrap {
 
     &::after {
         content: "";
+        transition: all 200ms ease-in-out;
         position: absolute;
         bottom: 0;
         left: 0.5rem;
@@ -60,7 +61,12 @@ a.a-wrap {
             background-color:  #888888;
             left: 0;
             width: 100%;
-            opacity: 0.06;
+            opacity: 0.15;
+        }
+
+        &::after{
+            left: 0;
+            right: 0;
         }
     }
 
@@ -97,7 +103,8 @@ a.a-wrap {
                 font-size: 0.8em;
                 line-height: 1;
                 padding: 0.5em;
-                opacity: 0.9;
+                opacity: 1;
+                background-color: rgba(64,72,84,.9);
                 color: #fafafa;
             }
         }
