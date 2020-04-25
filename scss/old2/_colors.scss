@@ -1,0 +1,29 @@
+/* Main */
+// ToDo:
+// cssの変数を使ってダークモードに対応
+$background: whitesmoke;
+$on-background: #454545;
+
+$primary: #0277bd;
+$primary-variant: #3949ab;
+$on-primary: white;
+
+// 以下はなるべく使わない
+$surface: white;
+$on-surface:#454545;
+
+$secondary: $primary;
+$secondary-variant: $primary-variant;
+$on-secondary: $on-primary;
+
+$error: #c62828; // red darken-3
+$on-error: white;
+
+/**
+ *
+ * 色参考サイト 
+ * https://materializecss.com/color.html
+ * https://material.io/design/color/the-color-system.html#color-theme-creation
+ * https://material.io/resources/color/
+ *
+ **/

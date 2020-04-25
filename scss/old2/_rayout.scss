@@ -1,0 +1,28 @@
+/* コンテナ等の配置に関するデザイン */
+.content {
+    .content-in {
+        flex-wrap: nowrap;
+        .main,
+        .sidebar {
+            border-radius: 0;
+            border: none;
+            padding: 0;
+            background-color: $surface;
+            color: $on-background;
+        }
+
+        .main {
+            flex-grow: 1;
+            margin-right: 10px;
+
+            @media (max-width: 834px) {
+                margin: 1rem 0 0;
+            }
+        }
+
+        .sidebar {
+            flex-shrink: 0;
+            margin: 0 0.5%;
+        }
+    }
+}
