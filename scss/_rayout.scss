@@ -1,0 +1,63 @@
+html {
+    font-size: 16px;
+
+    @media (max-width: 834px) {
+        font-size: 15px;
+    }
+
+    @media (max-width: 480px) {
+        font-size: 14px;
+    }
+}
+
+body {
+    background-color: #ededed;
+}
+
+.breadcrumb.sbp-main-before,
+.breadcrumb.sbp-footer-before,
+.breadcrumb.pbp-main-before,
+.breadcrumb.pbp-footer-before {
+    background-color: transparent;
+    margin: 0 auto;
+    padding: 0.35rem 1rem;
+}
+
+.breadcrumb.sbp-main-before + .content,
+.breadcrumb.pbp-main-before + .content {
+    margin-top: 0; // 上書き用
+}
+
+.content {
+    margin-top: 1px;
+    background-color: $background;
+
+    .content-in {
+        max-width: 1256px;
+        width: 100%;
+        display: flex;
+
+        .main,
+        .sidebar {
+            padding: 1.5rem;
+            margin: 0;
+            max-width: 100%;
+
+            @media (max-width: 834px) {
+                padding: 1rem 0.3rem;
+
+                .article{
+                    margin: 0.7rem;
+                }
+            }
+        }
+
+        .main {
+            flex-grow: 1;
+        }
+
+        .sidebar {
+            flex-shrink: 0;
+        }
+    }
+}

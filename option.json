@@ -1,0 +1,13 @@
+{
+  "site_key_color":"#4784BF",
+  "site_key_text_color":"#fff",
+  "header_layout_type_":"top_menu_right",
+  "site_font_size":"16px",
+  "mobile_site_font_size": "14px",
+  "site_background_color":"#ededed",
+  "related_entry_type":"entry_card",
+  "post_navi_type":"square",
+  "single_breadcrumbs_position":"main_before",
+  "page_breadcrumbs_position":"main_before",
+  "toc_depth": "3"
+}
